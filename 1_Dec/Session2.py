@@ -1,4 +1,5 @@
 '''
+                                            |LIST|                                           
 ---------------|THEORY|----------------
 NOTE:
 index: starts from 0 to n
@@ -23,13 +24,13 @@ a[-2:]--take value from a[-2] to end-[4,5]
 
 '''
 #---------------------BAI1---------------------
-
 #random list 10 so
 from random import randint
 ten_list=[]
 for i in range(10):
     ten_list.append(randint(1,10))
 print(ten_list)
+'''
 #new list three first values
 three_list=[]
 for i in range(3):
@@ -43,19 +44,24 @@ for i in range(len(ten_list)-1,len(ten_list)-4,-1):
 print(rev_three_list)
 print(ten_list[-3: ])
 '''
+'''
 USE LIST SLICING | FOR THE ABOVE
 '''
 #rearrange list max to min
-for j in range(len(ten_list)-1):
+loop=True
+counter=0
+while loop:
     for i in range(len(ten_list)-1):
         if ten_list[i]<ten_list[i+1]:
             ten_list[i],ten_list[i+1]=ten_list[i+1],ten_list[i]
-print(ten_list)
-#rearrange list max to min
-for j in range(len(ten_list)-1):
-    for i in range(len(ten_list)-1):
-        if ten_list[i]>ten_list[i+1]:
-            ten_list[i],ten_list[i+1]=ten_list[i+1],ten_list[i]
-print(ten_list)
+            counter+=1
+    if counter==0:
+        loop=False
+    else:
+        counter=0
+    print(ten_list)
+
+
+
 
 
