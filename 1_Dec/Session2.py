@@ -1,6 +1,7 @@
 '''
                                             |LIST|                                           
 ---------------|THEORY|----------------
+|||||||ROOM FOR IMPROVEMENTS|||||||
 NOTE:
 index: starts from 0 to n
 [-1]==[n]
@@ -49,17 +50,13 @@ USE LIST SLICING | FOR THE ABOVE
 '''
 #rearrange list max to min
 loop=True
-counter=0
 while loop:
+    loop=False
     for i in range(len(ten_list)-1):
         if ten_list[i]<ten_list[i+1]:
             ten_list[i],ten_list[i+1]=ten_list[i+1],ten_list[i]
-            counter+=1
-    if counter==0:
-        loop=False
-    else:
-        counter=0
-    print(ten_list)
+            loop=True
+print(ten_list)
 
 
 
