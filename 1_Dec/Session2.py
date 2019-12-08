@@ -79,19 +79,20 @@ print(ten_list)
 '''
 #-----------------BAI2--------------
 multi_list=[1,3,4,16,32,8,64,4,128,2,256,32]
+# multi_list=[16, 2, 4, 2, 128, 64, 16, 7, 1, 64, 32, 16, 5, 8]
 multi_dict={}
-multi_ind={}
 multi_sum=[]
+counter=0
 for j in range(len(multi_list)-1):
     first=multi_list[j]
     for i in range(len(multi_list)-1):
         if first!=multi_list[i]:
             if first*multi_list[i]==256 and first+multi_list[i] not in multi_sum:
-                multi_dict[first]=multi_list[i]
-                multi_ind[j]=i
+                multi_dict[counter]=[multi_list[i],i,first,j]
                 multi_sum.append(first+multi_list[i])
+                counter+=1
 print(multi_dict)
-
+#instead of using mutli_sum you can replace the elements by making them zero
 
 
 
